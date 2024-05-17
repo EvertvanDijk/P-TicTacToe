@@ -24,6 +24,8 @@ def check_for_win(player, position):
         board_layout[int(position)-1] = player
     draw_board(board_layout[0], board_layout[1], board_layout[2], board_layout[3], board_layout[4], board_layout[5], board_layout[6], board_layout[7], board_layout[8])
     #print("last turn by "+player)
+
+    
     if player == "X":
         computers_turn()
     else:
@@ -47,12 +49,3 @@ while winner != "winner" :
     x = input("Choose a position: ")
     check_for_win("X", x)
     #play_the_game(x)
-
-
-
-
-
-
-
-
-
