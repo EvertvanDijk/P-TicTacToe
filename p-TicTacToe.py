@@ -20,12 +20,18 @@ def draw_board(a,b,c,d,e,f,g,h,i):
 
 #def test_for_win
 def check_for_win(player, position):
+    if position == "-1":
+        print("Thanks for playing, bye")
+        exit()
     if board_layout[int(position)-1] == " ":
         board_layout[int(position)-1] = player
     draw_board(board_layout[0], board_layout[1], board_layout[2], board_layout[3], board_layout[4], board_layout[5], board_layout[6], board_layout[7], board_layout[8])
-    #print("last turn by "+player)
 
-    
+# Test all possible winning combinations
+
+# lots of if else statements here #
+
+#print("last turn by "+player)
     if player == "X":
         computers_turn()
     else:
