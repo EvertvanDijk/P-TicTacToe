@@ -1,15 +1,21 @@
-from os import system
-from array import *
+#import os
+from os import system, name
 from random import randint
+import numpy as np
 
-# enter values for board
+# cls() to work on win and 'nix platforms
+def cls():
+    lambda: system('cls' if name =='nt' else 'clear')
+
+
+# enter initial values for board
 board_layout = [" "," "," "," "," "," "," "," "," "]
 winner = ""
 
 
 def draw_board(a,b,c,d,e,f,g,h,i):
 # create the board according to values presented.
-#    system('cls')
+    cls()
     print("---- ---- ---")
     print("| "+a+" | "+b+" | "+c+" |")
     print("---- ---- ---")
@@ -21,6 +27,7 @@ def draw_board(a,b,c,d,e,f,g,h,i):
 #def test_for_win
 def check_for_win(player, position):
     if position == "-1":
+        cls()
         print("Thanks for playing, bye")
         exit()
     if board_layout[int(position)-1] == " ":
@@ -29,7 +36,9 @@ def check_for_win(player, position):
 
 # Test all possible winning combinations
 
-# lots of if else statements here #
+# lots of if else statements here, use numpy
+    #
+    # #
 
 #print("last turn by "+player)
     if player == "X":
@@ -40,7 +49,7 @@ def check_for_win(player, position):
 #computers turn
 def computers_turn():
     x = randint (1,9)
-    print(x)
+    #print(x)
     check_for_win("O", x)
 
 
