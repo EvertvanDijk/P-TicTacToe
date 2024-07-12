@@ -5,7 +5,7 @@ import numpy as np
 
 # cls() to work on win and 'nix platforms
 def cls():
-    lambda: system('cls' if name =='nt' else 'clear')
+    system('cls' if name =='nt' else 'clear')
 
 
 # enter initial values for board
